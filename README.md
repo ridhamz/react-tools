@@ -3,7 +3,7 @@
   <h3 align="center">react-tools</h3>
 
   <p align="center">
-    A light library for working with files.
+    A light library that contains usfull hooks and functions.
     <br />
 </div>
 
