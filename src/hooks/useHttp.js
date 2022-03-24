@@ -5,13 +5,17 @@ const useHttp = (token) => {
   const [error, setError] = useState();
   const activeHttpRequest = useRef([]);
 
+  // GET THE URL FROM THE .ENV FILE
   const baseUrl = process.env.REACT_APP_API_endpoint;
+
+  // GET THE TOKEN FROM LOCAL STORAGE
 
   const request = (args) => fetch(...args);
 
   const clearError = () => setError(null);
 
-  const sendRequest = useCallback(async (method = 'get', url, body = null) => {
+  // THIS FUNCTION WILL BE USED TO SEND HTTP REQUESTS ( the default method is get)
+  const sendRequest = useCallback(async (url, method = 'get', body = null) => {
     const options = { headers: { Authorization: `Bearer ${token}` } };
     setIsLoading(true);
     const [result, error] = handleAsync(
@@ -32,6 +36,7 @@ const useHttp = (token) => {
       activeHttpRequest.current.forEach((abortCtrl) => abortCtrl.abort());
   }, []);
 
+  // RETURN VALUES
   return { sendRequest, isLoading, error, clearError };
 };
 

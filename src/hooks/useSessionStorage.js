@@ -19,3 +19,4 @@ export default useSessionStorage = (key, initialValue) => {
 
   return { storedData, getItem, setItem };
 };
+
