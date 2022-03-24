@@ -1,4 +1,4 @@
-export default function handleAsync(fn) {
+export default async function handleAsync(fn) {
   try {
     const result = await fn();
     return [result || true, null];
