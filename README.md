@@ -11,11 +11,11 @@
 
 ## About The Project
 
-node-files is a Node.js library provides many functions to make dealing with file system operations super easy.
+react-tools is a react.js library provides useful hooks and functions to make dealing with asynchronous operation easy and gain more performance.
 
 ### Built With
 
-- [Node.js](https://nodejs.org/)
+- [React.js](https://reactjs.org/)
 
 <!-- GETTING STARTED -->
 
